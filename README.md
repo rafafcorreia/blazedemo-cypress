@@ -8,11 +8,9 @@
 
 5. `npx cypress open`
 
-6. Definir a baseUrl
+6. Definir a baseUrl, viewportHeight e viewportWidth no arquivo cypress.config.js
 
-7. Definir viewportHeight e viewportWidth
-
-8. Configurar o intellisense de comandos do Cypress, criando o arquivo tsconfig.json na raiz:
+7. Configurar o intellisense de comandos do Cypress, criando o arquivo tsconfig.json na raiz:
 
 ```
 {
@@ -33,17 +31,17 @@
     ]
 }
 ``` 
-9. Instalar o plugin ES6 Mocha Snippets
+8. Instalar o plugin ES6 Mocha Snippets
  
-10. Instalar o plugin ESLint, configurando em Extensions Settings dele para sempre mostrar barra de status
+9. Instalar o plugin ESLint, configurando em Extensions Settings dele para sempre mostrar barra de status
 
-11. Instalar o pacote do ESLint:
+10. Instalar o pacote do ESLint:
 `npm i eslint --save-dev`
 
-12. Instalar o pacote ESLint-Plugin-Cypress para incluir as regras do Cypress:
+11. Instalar o pacote ESLint-Plugin-Cypress para incluir as regras do Cypress:
 `npm i eslint-plugin-cypress --save-dev`
 
-13. Criar arquivo .eslintrc.json na raiz contendo as regras:
+12. Criar arquivo .eslintrc.json na raiz contendo as regras:
 
 ```
 {
@@ -105,7 +103,7 @@
 }
 ``` 
 
-14. No caso do Blazedemo, como é um site terceiro, será necessário adicionar o seguinte bloco de código no arquivo e2e.js para ignorar alguns erros inesperados da aplicação:
+13. No caso do Blazedemo, como é um site terceiro, será necessário adicionar o seguinte bloco de código no arquivo e2e.js para ignorar alguns erros inesperados da aplicação:
 
 ```
 Cypress.on('uncaught:exception', () => {
