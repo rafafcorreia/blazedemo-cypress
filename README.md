@@ -33,7 +33,7 @@
 ``` 
 8. Instalar o plugin ES6 Mocha Snippets
  
-9. Instalar o plugin ESLint, configurando em Extensions Settings dele para sempre mostrar barra de status
+9. Instalar o plugin ESLint
 
 10. Instalar o pacote do ESLint:
 `npm i eslint --save-dev`
