@@ -29,8 +29,29 @@ describe('Busca por voos', () => {
             cy.get('.container h3')
                 .should('have.text', 'Flights from São Paolo to Cairo: ')
 
+            cy.get('tbody input[type="submit"]')
+                .eq(0)
+                .click()
+
+            cy.title().should('eq', 'BlazeDemo Purchase')
+
+            cy.get('#inputName')
+                .type('Fulano')
+            
+            cy.get('#rememberMe')
+                .click()
+
+            cy.get('input[value="Purchase Flight"]')
+                .click()
+
+            cy.title().should('eq', 'BlazeDemo Confirmation')
+
+            cy.get('div h1')
+                .should('have.text', 'Thank you for your purchase today!')
+
         })
 
+        
         massaVoos.array.forEach(({ origem, destino }) => {
             it(`Buscar voos entre ${origem} e ${destino} - Data Driven`, () => {
                 cy.title().should('eq', 'BlazeDemo')
